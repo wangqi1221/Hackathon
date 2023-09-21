@@ -1,35 +1,37 @@
 <div class="predict_container">
     <div class="header">
-        <h1 class="title">predict</h1>
-        <!-- <div class="text">
-            <p class="title">predict</p>
-            <p class="desc">Adjust the Service and you can see the estimated data.</p>
-        </div> -->
-        <img class="add" width="20" src="/assets/img/add.svg" nz-dropdown [nzDropdownMenu]="menu">
+        <div class="header_left">
+            <h1 class="title">predict</h1>
 
-        <nz-dropdown-menu #menu="nzDropdownMenu">
-            <ul nz-menu nzSelectable>
-                <ng-container *ngFor="let item of supportServices">
-                    <li nz-menu-item (click)="onAddService(item)">{{ item.name }}</li>
-                </ng-container>
-                <!-- <li nz-menu-item>1st menu item</li>
-                <li nz-menu-item>2nd menu item</li>
-                <li nz-menu-item>3rd menu item</li> -->
-                <!-- <li nz-menu-item>4th danger item</li> -->
-            </ul>
-        </nz-dropdown-menu>
+            <img class="add" width="20" src="/assets/img/add.svg" nz-dropdown [nzDropdownMenu]="menu">
 
-        <div class="submit">
-            <div class="button">Submit</div>
+            <nz-dropdown-menu #menu="nzDropdownMenu">
+                <ul nz-menu nzSelectable>
+                    <ng-container *ngFor="let item of supportServices">
+                        <li nz-menu-item (click)="onAddService(item)">{{ item.name }}</li>
+                    </ng-container>
+                </ul>
+            </nz-dropdown-menu>
         </div>
+
+
+        <div class="button">Submit</div>
 
     </div>
     <div class="divider"></div>
 
-    <div class="services">
-        <ng-container *ngFor="let item of services" [class.center-card]="isCenterCard">
-            <app-predict-edit-item [service]="item"></app-predict-edit-item>
-        </ng-container>
+    <div class="bottom">
+        <div class="services">
+            <ng-container *ngFor="let item of services" [class.center-card]="isCenterCard">
+                <app-predict-edit-item [service]="item"></app-predict-edit-item>
+            </ng-container>
+        </div>
+
+        <div class="bottom_right">
+            <div class="bottom_title">Prediction</div>
+            <div class="value">+10%</div>
+        </div>
     </div>
     
+
 </div>
