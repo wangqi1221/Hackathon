@@ -1,0 +1,82 @@
+:host {
+    .edit_item {
+        border-radius: 10px;  
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;  
+        width: 600px;  
+        height: 100px; 
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; 
+    }
+    .item_left {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        .pic {
+            margin-left: 10px;
+            width: 20%;
+            height: 80px;
+        }
+        .des {
+            width: 80%;
+            height: 80px;
+        }
+    }
+    .item_right {
+        width: 20%;
+        // display: flex;
+        // justify-content: space-between;
+        .close {
+            width: 95%;
+            height: 26px;
+            margin-top: 10px;
+            position: relative; 
+            .close_img {
+                position: absolute;  
+                top: 0;  
+                right: 0;  
+            }
+        }
+        .item_right_bottom {
+            height: 74px;
+            padding-top: 10px;
+            margin-right: 20px;
+            align-items: last baseline;  
+            justify-content: last baseline;
+            .right_button {
+                height: 30px;
+                background-color: #4740b3;
+                align-items: center;  
+                justify-content: center;
+                display: flex; 
+                color: #ffffff;
+                border-radius: 6px;
+            }
+        }
+        
+    }
+    
+    .service_title {
+        font-family: '阿里妈妈东方大楷 Regular';
+        src: url('../../../assets/font/Alimama_DongFangDaKai_Regular.otf');
+        font-size: 20px;
+        line-height: 1.2;
+        padding-top: 12px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-bottom: 0px;
+    }
+    .service_desc {
+        font-family: '阿里妈妈东方大楷 Regular';
+        src: url('../../../assets/font/Alimama_DongFangDaKai_Regular.otf');
+        font-size: 16px;
+        color: #767676;
+        overflow: hidden;
+        padding-top: 0px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+}

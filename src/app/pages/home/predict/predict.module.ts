@@ -4,22 +4,24 @@ import { PredictComponent } from './predict.component';
 import { PredictRoutingModule } from './predict-routing.module';
 import { NzButtonModule } from 'ng-zorro-antd/button';
 import { NzDropDownModule } from 'ng-zorro-antd/dropdown';
-import { ServiceItemComponent } from '../../../components/service-item/service-item.component';
 import { ServiceItemModule } from '@/components/service-item/service-item.module';
+import { PredictEditItemModule } from '@/components/predict-edit-item/predict-edit-item.module';
+import { NzMessageModule } from 'ng-zorro-antd/message';
 
 
 
 @NgModule({
   declarations: [
-    PredictComponent,
-    // ServiceItemComponent
+    PredictComponent
   ],
   imports: [
     CommonModule,
     PredictRoutingModule,
     ServiceItemModule,
     NzButtonModule,
-    NzDropDownModule
+    NzDropDownModule,
+    PredictEditItemModule,
+    NzMessageModule
   ]
 })
 export class PredictModule { }

@@ -1,5 +1,6 @@
 import { ServiceInfo } from '@/model/model';
 import { Component, Input, OnInit } from '@angular/core';
+import { NzMessageService } from 'ng-zorro-antd/message';
 
 @Component({
   selector: 'app-predict',
@@ -21,7 +22,7 @@ export class PredictComponent implements OnInit {
       {name: 'Service2', desc: "desc"},
       {name: 'Service3', desc: "desc"},
       {name: 'Service4', desc: "desc"},
-      {name: 'Servic5', desc: "desc"},
+      {name: 'Service5', desc: "desc"},
       {name: 'Service6', desc: "desc"},
       {name: 'Service7', desc: "desc"},
       {name: 'Service8', desc: "desc"},
@@ -30,6 +31,8 @@ export class PredictComponent implements OnInit {
   ]
 
   isCenterCard = false;  
+
+  constructor(private message: NzMessageService) {}
 
   ngOnInit(): void {
     // if (this.services.length === 1) {  
@@ -40,8 +43,18 @@ export class PredictComponent implements OnInit {
     // } 
   }
 
-  menu() {
-    
+  onAddService(item: ServiceInfo) {
+    // if (this.services.includes(item)) {
+    //   this.creatMessage()
+    // }
+
+    if (this.services.filter(obj => obj.name === item.name).length > 0) {
+      this.creatMessage()
+    }
+  }
+
+  creatMessage() {
+    this.message.info('This service has been subscribed.');
   }
 
 }
