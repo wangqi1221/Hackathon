@@ -1,0 +1,35 @@
+<div class="overview">
+    <div class="item1">
+        <div class="client">
+            <h2>Clients</h2>
+            <div class="tornado">
+                <div class="item" *ngFor="let item of tornados">
+                    <app-info-item [tornado]="item"></app-info-item>
+                </div>
+            </div>
+        </div>
+
+        <div class="service">
+            <h2>Service</h2>
+            <app-bar-chart class="bar"></app-bar-chart>
+        </div>
+    </div>
+
+    <!-- <div class="user">
+        <h2>Clients</h2>
+    </div> -->
+
+
+    <!-- <div class="vertical">
+        <div class="horizontal">
+            <div class="tornado">
+                <div class="item" *ngFor="let item of tornados">
+                    <app-info-item [tornado]="item"></app-info-item>
+                </div>
+            </div>
+
+            <app-bar-chart class="bar"></app-bar-chart>
+        </div>
+    </div> -->
+
+</div>

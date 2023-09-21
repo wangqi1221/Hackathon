@@ -1,0 +1,13 @@
+<div>
+    <div class="header">
+      <app-header></app-header>
+    </div>
+    
+    <!-- <div class="site_body_container">
+      <router-outlet></router-outlet>
+    </div> -->
+  </div>
+  
+  <ng-container *ngIf="platformService.isPlatformClient()">
+    <router-outlet></router-outlet>
+  </ng-container>

@@ -1,0 +1,10 @@
+<div clss="info_item">
+    <div class="info_current" (click)="onNavigationDetail()">
+        <p class="info_name">{{ tornado.name }}</p>
+        <nz-progress 
+        class="client_progress" 
+        [nzStrokeColor]="{ '0%': '#4942B4', '100%': '#4740b3' }"
+        [nzPercent]="tornado.value"
+        ></nz-progress>
+    </div>
+</div>

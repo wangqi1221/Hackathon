@@ -1,0 +1,43 @@
+<div class="detail">
+    <div class="detail_left">
+        <div class="client_profile">
+            <p class="detail_header">Client</p>
+            <div class="profile_des">
+                <p class="des1">Location: UK</p>
+                <p class="des2">Asset Class: Equity</p>
+            </div>
+            <div class="profile_des">
+                <p class="des1">Risk Attitudes: Risk Averse</p>
+                <p class="des2">Asset Under Management: $50000000</p>
+            </div>
+            <div class="profile_des">
+                <p class="service_desc">First time to use the services: 2020-01-01</p>
+            </div>
+        </div>
+        <div class="currnt_service">
+            <div class="currnt_service_header">
+                <p class="detail_header">Subscribed Services</p>
+                <button nz-button nzType="primary" class="go_predict" (click)="onNavigationPredict()">Go Predict</button>
+            </div>
+            
+            <ng-container *ngFor="let service of scrrentServices">
+                <app-info-item [tornado]="service"></app-info-item>
+            </ng-container>
+        </div>
+    </div>
+    <div class="detail_right">
+        <p class="detail_header">Prediction</p>
+        <div class="recommend">
+            <div class="recommend_header">
+                <p class="detail_header">Recommend</p>
+                <button nz-button nzType="primary" class="recommend_all">Recommend All</button>
+            </div>
+            <div class="grid-container">
+                <ng-container *ngFor="let item of recommendServices; let i = index">
+                    <app-service-item [service]="item"></app-service-item>
+                </ng-container>
+            </div>
+        </div>
+    </div>
+    
+</div>

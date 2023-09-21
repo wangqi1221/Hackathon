@@ -1,0 +1,27 @@
+@import '../../../theme/variables.less';
+:host {
+    .site_header {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 30px;
+        padding-right: 30px;
+        background-color: @whiteColor;
+        height: @topMenuHeight;
+        border-bottom: 1px solid @borderColor;
+        .item {
+            color: @drakPrimaryColor !important;
+            font-family: '阿里妈妈东方大楷 Regular';
+            src: url('../../../../assets/font/Alimama_DongFangDaKai_Regular.otf');
+            font-size: 26px;
+            height: @topMenuHeight;
+            &.site_title {
+                font-weight: bold;
+                line-height: @topMenuHeight;
+                border-radius: 0 !important;
+            }
+        }
+    }
+    .site_user {
+        width: 100px;
+    }
+}

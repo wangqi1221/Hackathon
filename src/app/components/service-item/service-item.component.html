@@ -1,0 +1,27 @@
+<!-- <div class="service_item">
+    <div class="item_container">
+        <p class="service_title">{{ service.name }}</p>
+        <p class="service_desc">{{ service.desc }}</p>
+    </div>
+    <div class="right_button">Recommend</div>
+</div> -->
+
+<div class class="service_item">
+        <div class="item_left">
+            <img class="pic" width="80" src="/assets/img/touxiang.svg">
+            <div class="des">
+                <p class="service_title">{{ service.name }}</p>
+                <p class="service_desc">{{ service.desc }}</p>
+            </div>
+        </div>
+        <div class="item_right">
+            <div class="close"> 
+                <img class="close_img" width="20" src="/assets/img/close.svg" (click)="onDel()">
+            </div>
+            <div class="item_right_bottom">
+                <div class="right_button">Recommend</div>
+            </div>
+            
+        </div>
+</div>
+ 
