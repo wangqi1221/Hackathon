@@ -3,6 +3,7 @@ export type CustomValue = Partial<{
     clientId: string
     clientName: string
     customValue: number
+    per: number
 }>
 
 export type Recommand = Partial<{

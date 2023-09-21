@@ -1,6 +1,8 @@
-import { ServiceInfo, Tornado } from '@/model/model';
+import { ServiceInfo, Tornado, UserProfile } from '@/model/model';
+import { PlatformService } from '@/service/platformService';
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Params, Router } from '@angular/router';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-client-detail',
@@ -8,12 +10,28 @@ import { Router } from '@angular/router';
   styleUrls: ['./client-detail.component.less']
 })
 export class ClientDetailComponent implements OnInit {
+  id?: string
+  userProfile: UserProfile = {}
   scrrentServices: Tornado[] = []
   recommendServices: ServiceInfo[] = []
+  subscription?: Subscription
 
-  constructor(private router: Router) {}
+  constructor(
+    private actviatedRoute: ActivatedRoute,
+    // private service: ServiceModel,
+    private service: PlatformService,
+    private router: Router
+    ) {}
 
   ngOnInit(): void {
+    this.id = this.actviatedRoute.snapshot.params['id']
+    // this.loadProfile()
+    // this.subscription = this.actviatedRoute.queryParams.subscribe(
+    //   (value: Params) => {
+    //     this.id = value?.id
+    //   }
+    // )
+
     this.scrrentServices = [
       {name: 'Service1', value: 10},
       {name: 'Service2', value: 10},
@@ -35,6 +53,13 @@ export class ClientDetailComponent implements OnInit {
       {name: 'Service1', desc: "desc"}
     ]
   }
+
+  // loadProfile() {
+  //   const id: string = this.id!
+  //   this.service.getClientProfile(id).subscribe(
+  //     (data: UserProfile) => this.userProfile = data
+  //   )
+  // }
 
   onNavigationPredict() {
     this.router.navigate(['/predict'])

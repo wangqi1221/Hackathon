@@ -16,7 +16,7 @@ import { ServiceItemModule } from '@/components/service-item/service-item.module
     ClientDetailRoutingModule,
     ServiceItemModule,
     InfoItemModule,
-    NzButtonModule
+    NzButtonModule,
   ]
 })
 export class ClientDetailModule { }
