@@ -9,6 +9,8 @@ import { Tornado } from '@/model/model';
 export class OverviewComponent implements OnInit {
   tornados: Tornado[] = []
 
+  cards: string[] = ['Service', 'Total Value', 'Client', 'Total Subscription']
+
   ngOnInit(): void {
     this.tornados = [
       {name: "Short-term treasuries", value: 30},

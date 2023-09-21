@@ -6,6 +6,7 @@ import { HomeComponent } from './home.component';
 import { ClientDetailModule } from './client-detail/client-detail.module';
 import { InfoItemModule } from '@/components/info-item/info-item.module';
 import { BarChartModule } from '@/components/bar-chart/bar-chart.module';
+import { CardModule } from './card/card.module';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { BarChartModule } from '@/components/bar-chart/bar-chart.module';
     HomeRoutingModule,
     ClientDetailModule,
     InfoItemModule,
-    BarChartModule
+    BarChartModule,
+    CardModule
   ]
 })
 export class HomeModule { }
