@@ -50,6 +50,8 @@ export class PredictComponent implements OnInit {
 
     if (this.services.filter(obj => obj.name === item.name).length > 0) {
       this.creatMessage()
+    } else {
+      this.services.push(item)
     }
   }
 
